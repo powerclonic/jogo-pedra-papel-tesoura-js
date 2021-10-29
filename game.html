@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap');
+    </style>
+    <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+    <header>
+        <div class="headerTitle">
+            <h1>Power</h1>
+        </div>
+        <nav>
+            <a class="indexButton" href="../Index/index.html">Check my<br>other projects!</a>
+        </nav>
+    </header>
+
+    <section class="bodyBlock">
+        <div class="titleContainer">
+            <h1>Rock, Paper, Scissors</h1>
+        </div>
+        <div class="gameContainer">
+            <div class="botHands">
+                <h1 class="handTitle">Bot</h1>
+                <img src="assets/rock.png" alt="rock" class="rockOpponent op hand">
+                <img src="assets/paper.png" alt="paper" class="paperOpponent op hand">
+                <img src="assets/scissors.png" alt="scissors" class="scissorsOpponent op hand">
+            </div>
+
+            <div class="caseContainers">
+                <div class="winCase case">
+                    <h1>Win!</h1>
+                </div>
+                <div class="loseCase case">
+                    <h1>Lose!</h1>
+                </div>
+                <div class="tieCase case">
+                    <h1>Tie!</h1>
+                </div>
+            </div>
+
+            <div class="plrHands">
+                <h1 class="handTitle">You</h1>
+                <img src="assets/Lrock.png" alt="rock" class="rockPlayer pl hand">
+                <img src="assets/Lpaper.png" alt="paper" class="paperPlayer pl hand">
+                <img src="assets/Lscissors.png" alt="scissors" class="scissorsPlayer pl hand">
+            </div>
+        </div>
+        <div class="optionsContainer">
+            <button class="rockOption">Rock</button>
+            <button class="paperOption">Paper</button>
+            <button class="sciOption">Scissors</button>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+<script src="handle.js"></script>
+
+</html>

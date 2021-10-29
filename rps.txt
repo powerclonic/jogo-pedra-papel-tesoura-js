@@ -1,0 +1,11 @@
+RP = lose
+PS = lose
+SR = lose
+
+SP = win
+PR = win
+RS = win
+
+PP = tie
+RR = tie
+SS = tie

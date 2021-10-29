@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #560884;
+    --font-color: #e9cafc;
+    --orange: #ff6600;
+    --color-2: #575757;
+    --color-3: #b1b1b1;
+} 
+
+@keyframes titleTilt {
+    0% {transform: rotate(0);}
+    25%  {transform: rotate(2.5deg); text-shadow: 0 0 10px #AAA; color: #252525;}
+    50% {transform: rotate(-2.5deg); text-shadow: 0 0 10px #AAA; color: #252525;}
+    75% {transform: rotate(2.5deg); text-shadow: 0 0 10px #AAA; color: #252525}
+    100% {transform: rotate(0deg);}
+}
+
+@keyframes handTilt {
+    0% {transform: rotate(0);}
+    25%  {transform: rotate(2.5deg);}
+    50% {transform: rotate(-2.5deg);}
+    75% {transform: rotate(2.5deg);}
+    100% {transform: rotate(0deg);}
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #CCC;
+}
+
+header {
+    width: 100vw;
+    height: 100px;
+    background-color: var(--orange);
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerTitle {
+    width: fit-content;
+    color: var(#575757);
+    display: flex;
+    align-items: center;
+}
+
+.headerTitle>h1 {
+    font-family: 'Pacifico', 'Arial';
+    margin: 0;
+    font-size: 3.5rem;
+    animation-name: titleTilt;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+nav {
+    width: 150px;
+}
+
+.indexButton {
+    color: #000;
+    text-decoration: none;
+    font-family: 'Roboto', 'Arial';
+    font-weight: 900;
+    font-size: 1.25rem;
+    height: 100%;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: .5s;
+}
+
+.indexButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.indexButton::before {
+    position: absolute;
+    top: calc(100px - 0.5rem);
+    display: block;
+    content: "";
+    height: 0.5rem;
+    width: 0rem;
+    background-color: #793000;
+    transition: .5s;
+}
+
+.indexButton:hover::before {
+    width: 150px;
+}
+
+.bodyBlock {
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #FFF;
+}
+
+.titleContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    font-size: 1.5rem;
+    font-family: 'Roboto', 'Arial';
+}
+
+.gameContainer {
+    width: calc(100% - 30px);
+    height: 600px;
+    background-color: #EEE;
+    border-radius: 20px;
+    margin: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gameContainer img {
+    position: relative;
+    width: 250px;
+    top: calc(100% - 300px);
+    animation-name: handTilt;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.op {
+    display: none;
+}
+
+.pl {
+    left: calc(100% - 250px);
+    display: none;
+}
+
+.optionsContainer {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
+}
+
+.optionsContainer>button {
+    width: 25%;
+    border-radius: 10px;
+    background-color: #000;
+    color: #FFF;
+    border: 2.5px solid #000;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.optionsContainer>button:hover {
+    background-color: #FFF;
+    color: #000;
+    cursor: pointer;
+}
+
+.case {
+    width: 200px;
+    height: 200px;
+    background-color: #CCC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 10px;
+    position: relative;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+    display: none;
+}
+
+.hand {
+    margin: 0;
+}
+
+.botHands {
+    height: 100%;
+    width: 25%;
+}
+
+.plrHands {
+    height: 100%;
+    width: 25%;
+}
+
+.caseContainers {
+    width: 25%;
+    height: 100%;
+}
+
+.handTitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 15px;
+    width: 100%;
+}
